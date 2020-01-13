@@ -1,0 +1,22 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_REFLOWOVEN
+	tristate "Reflow Oven Compatible with Andy Brown's Reflow Oven v2 Android App"
+	default n
+	---help---
+		Enable the Reflow Oven Application
+
+if EXAMPLES_REFLOWOVEN
+
+config EXAMPLES_REFLOWOVEN_STACKSIZE
+	int "Reflow Oven stack size"
+	default 2048
+
+config EXAMPLES_REFLOWOVEN_PRIORITY
+	int "Reflow Oven task priority"
+	default 50
+
+endif
